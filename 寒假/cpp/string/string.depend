@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1422165942 source:/home/rccoder/code/cpp/string/main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"String.h"
+
+1422166156 /home/rccoder/code/cpp/string/String.h
+
