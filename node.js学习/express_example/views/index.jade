@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  section#wrapper
+    h2	Basic
+    section
+      p
+        span  q
+  - var name = "rccoder"
+  h1 Hello #{name}!
+  - users = ['Sally', 'Joseph', 'Rccoder']
+  - each user in users
+    p= user
+  - for user in users
+    p= user
+
+  -obj = {firs_name:'shangbin', second_name:'rccoder'}
+  -each val, key in obj
+    li #{key}:#{val}
+  script
+    alert ('Success!')
+
+
+  mixin  users(users)
+    ul
+      each user in users
+        li= user
+  
+  - users = ['1', '2', '3']
+  mixin users(users)
+
+  - more_users = ['4', '5', '6']
+  mixin users(more_users)
+
+
+  h1 Jade Includes/footer.jade
+  include includes/footer
+
+  h2 Form Example
+  form(method='post', action='/')
+  fieldset
+    legend Add a user
+    p
+      label First Name
+      input(name='user[first_name]')
+     p
+       label Last Name
+       input(name='user[last_name]')
+     p
+       input(type="submit", value='Save')
